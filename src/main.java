@@ -118,9 +118,8 @@ public class main {
 					if(i == addresses.length - 1)
 						elevations[i] = new AddressElevation(addresses[i], line.trim().substring(14, line.trim().length() - 1));
 					else
-						elevations[i] = new AddressElevation(addresses[i].substring(0, addresses[i].length() - 1), line.trim().substring(14, line.trim().length() - 1));
-					
-					
+						elevations[i] = new AddressElevation(addresses[i].substring(0, addresses[i].length()), line.trim().substring(14, line.trim().length() - 1));
+									
 				}
 
 			}
