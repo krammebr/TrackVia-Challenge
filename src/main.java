@@ -156,15 +156,19 @@ public class main {
 		int size = ae.length;
 		AddressElevation temp;
 
-		for (int i = 0; i < size - 1; i++) {
+		for (int i = 0; i < size; i++) {
 			int max = i;
-			for (int j = i + 1; j < size; j++) {
-				if (ae[j].getElevation() > ae[max].getElevation()) {
-					max = j;				
+			
+			for (int j = 0 ; j < size; j++) {
+		
+				if (ae[j].getElevation() < ae[max].getElevation()) {
+		
+					max = j;
 				}
 				temp = ae[max];
 				ae[max] = ae[i];
 				ae[i] = temp;
+				
 			}
 		}
 	}
